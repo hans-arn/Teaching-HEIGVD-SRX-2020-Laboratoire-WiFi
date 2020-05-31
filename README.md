@@ -4,7 +4,7 @@ Vous aurez besoin de ``Wireshark`` et du logiciel ``aircrack-ng`` pour ce labora
 
 Si vous utilisez une distribution Kali, tout est déjà pré-installé. Pour la version Windows du logiciel ``aircrack-ng``ou pour son installation sur d'autres distributions, référez-vous au
 [site web aircrack-ng](https://aircrack-ng.org) et/ou au gestionnaire de paquets de votre distribution.
- 
+
 # Identification d'un dispositif
 
 ## Introduction
@@ -42,22 +42,22 @@ Nous savons que la cible s’est hébergée à l’hôtel « Black Rain » et qu
 
 > **_Question :_** Quel filtre avez-vous utilisé
 > 
-> **_Réponse :_** 
+> **_Réponse :_**  J''ai utilisé le filtre suivant **wlan.fc.type_subtype eq 4**
 
 ---
 > **_Question :_** Quel est l’adresse MAC de la cible ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** 0xFC F1 36 22 49 74
 
 ---
 > **_Question :_** Quel est le nom du constructeur de l’interface sans fils de la cible ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** Le constructeur est de marque samsung.
 
 ---
 > **_Question :_** Quel autres endroits la cible a-t-elle probablement visités ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** Notre cible est problablement déjà allée à la migros, à Genève Airport, BlackrainHotel, Fleur de Pains et au starbucks.
 
 ---
 
@@ -103,17 +103,19 @@ Maintenant que vous avez la clé WEP, configurez la dans Wireshark afin de déch
 
 > **_Question :_** Combien de temps avez-vous attendu pour obtenir la clé WEP ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** C'est quasi instantané. 
 
 ---
 > **_Montrer une capture d'écran de l'obtention de la clé WEP_**
 > 
-> **_Capture ici_** 
+> ![](./images/capture_wep.png)
 
 ---
 > **_Question :_** Arrivez-vous à récupérer les informations d’identification (credentials) de l’authentification basique http contenue dans la capture ?
-> 
-> **_Réponse :_** 
+>
+> **_Réponse :_** Oui c'est admin:admin
+>
+> ![](/home/jerome/HEIG/Labo/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-WiFi/images/cred.png)
 
 ---
 
@@ -140,7 +142,7 @@ Nous utiliserons Wireshark pour trouver l’authentification WPA contenue dans l
 
 > **_Fournir une capture d'écran des chiffres aléatoires_**
 > 
-> **_Capture ici_** 
+> ![](/home/jerome/HEIG/Labo/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-WiFi/images/nonce.png) 
 
 ---
 
@@ -151,7 +153,7 @@ Nous allons nous servir de l’outil aircrack-ng et d’un dictionnaire pour ret
 
 * Copier [le dictionnaire](files/french_dico.txt) sur votre machine locale 
 * Utilisez aircrack-ng en ligne de commandes pour cracker la passphrase du réseau WPA avec le même [fichier de capture chiffrée avec WPA](files/coursWLAN-WPA.cap) que vous avez déjà copié.
- 
+
 ```
 aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 ```
@@ -162,12 +164,12 @@ aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 
 > **_Question :_** Combien de temps avez-vous attendu pour obtenir la passphrase WPA ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** Cela Prend environ 15 secondes. 
 
 ---
 > **_Montrer une capture d'écran de l'obtention de la passphrase WPA_**
 > 
-> **_Capture ici_** 
+> ![](/home/jerome/HEIG/Labo/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-WiFi/images/capture_wpa.png)
 
 ---
 > **_Question :_** Lors de la capture, la cible a fait un « ping » sur un serveur. Arrivez-vous à dire de quel serveur il s’agit ?
@@ -175,9 +177,9 @@ aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 > 
 > **_Réponse :_** 
 > 
-> Adresse IP du serveur : ?
+> Adresse IP du serveur :  31.13.64.35
 >
-> Nom de Domaine : ?
+> Nom de Domaine : Xerox ou cisco
 
 
 
@@ -189,11 +191,11 @@ Nous avons enlevé une seule trame (choisie stratégiquement) du fichier de capt
 
 > **_Question :_** Est-ce que vous arrivez à refaire l'exercice ? Pourquoi ou pourquoi pas ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** On ne peut pas refaire l'exercice car aircrack n'arrive pas à identifier de réseaux
 
 ---
 > **_Question :_** Sur la base de votre réponse précédente, arrivez-vous à déduire quelle trame a été effacée ?
 
 > 
-> **_Réponse :_** 
+> **_Réponse :_** Il manque la trame 2 du four ways handshake. 
 > 
