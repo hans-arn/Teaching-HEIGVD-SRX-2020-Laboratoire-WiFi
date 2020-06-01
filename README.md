@@ -57,7 +57,7 @@ Nous savons que la cible s’est hébergée à l’hôtel « Black Rain » et qu
 ---
 > **_Question :_** Quel autres endroits la cible a-t-elle probablement visités ?
 > 
-> **_Réponse :_** Notre cible est problablement déjà allée à la migros, à Genève Airport, BlackrainHotel, Fleur de Pains et au starbucks.
+> **_Réponse :_** Notre cible est problablement déjà allée à la migros, à Genève Airport et à  Fleur de Pains .
 
 ---
 
@@ -115,7 +115,7 @@ Maintenant que vous avez la clé WEP, configurez la dans Wireshark afin de déch
 >
 > **_Réponse :_** Oui c'est admin:admin
 >
-> ![](/home/jerome/HEIG/Labo/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-WiFi/images/cred.png)
+> ![](./images/cred.png)
 
 ---
 
@@ -141,8 +141,10 @@ Nous utiliserons Wireshark pour trouver l’authentification WPA contenue dans l
 * Analyser les messages du 4-way handshake. En particulier, essayer de trouver les chiffres aléatoires (Nonces) échangés entre le client et l’AP.
 
 > **_Fournir une capture d'écran des chiffres aléatoires_**
-> 
+>
 > ![](./images/nonce.png) 
+>
+> ![](./images/photo_2020-06-01_11-12-16.jpg)
 
 ---
 
@@ -179,7 +181,7 @@ aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 > 
 > Adresse IP du serveur :  31.13.64.35
 >
-> Nom de Domaine : Xerox ou cisco
+> Nom de Domaine : edge-star-mini-shv-01-amt2.facebook.com
 
 
 
