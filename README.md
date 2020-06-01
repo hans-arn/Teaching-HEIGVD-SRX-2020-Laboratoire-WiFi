@@ -142,7 +142,7 @@ Nous utiliserons Wireshark pour trouver l’authentification WPA contenue dans l
 
 > **_Fournir une capture d'écran des chiffres aléatoires_**
 > 
-> ![](/home/jerome/HEIG/Labo/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-WiFi/images/nonce.png) 
+> ![](./images/nonce.png) 
 
 ---
 
@@ -169,7 +169,7 @@ aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 ---
 > **_Montrer une capture d'écran de l'obtention de la passphrase WPA_**
 > 
-> ![](/home/jerome/HEIG/Labo/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-WiFi/images/capture_wpa.png)
+> ![](./images/capture_wpa.png)
 
 ---
 > **_Question :_** Lors de la capture, la cible a fait un « ping » sur un serveur. Arrivez-vous à dire de quel serveur il s’agit ?
