@@ -113,13 +113,10 @@ Maintenant que vous avez la clé WEP, configurez la dans Wireshark afin de déch
 ---
 > **_Question :_** Arrivez-vous à récupérer les informations d’identification (credentials) de l’authentification basique http contenue dans la capture ?
 >
+> ![](./images/cred.png)
 > **_Réponse :_** Oui c'est admin:admin
 >
-> ![](./images/cred.png)
->
->
->
->
+> 
 ---
 
 
