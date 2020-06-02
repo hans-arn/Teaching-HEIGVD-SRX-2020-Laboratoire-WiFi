@@ -1,4 +1,6 @@
 # Teaching-HEIGVD-SRX-2020-Laboratoire-WiFi
+>- Quentin Saucy
+>- Jérôme Arn 
 
 Vous aurez besoin de ``Wireshark`` et du logiciel ``aircrack-ng`` pour ce laboratoire. 
 
